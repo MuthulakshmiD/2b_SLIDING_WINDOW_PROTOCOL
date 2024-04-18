@@ -9,14 +9,16 @@
 6. Stop the Program
 ## PROGRAM
 ## server
+```
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
 while True:
  print(s.recv(1024).decode())
  s.send("acknowledgement recived from the server".encode())
- 
+ ```
 ## client
+```
 import socket
 s=socket.socket()
 s.bind(('localhost',8000))
@@ -35,6 +37,7 @@ while True:
    if ack:
     print(ack)
     i+=s
+```
 ## OUPUT
 ![image](https://github.com/MuthulakshmiD/2b_SLIDING_WINDOW_PROTOCOL/assets/144870775/7691f8e5-9b34-495f-b9ab-068b4796c3c0)
 
